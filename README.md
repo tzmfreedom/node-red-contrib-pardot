@@ -1,6 +1,6 @@
 # node-red-contrib-pardot
 
-A set of [Node-RED](http://www.nodered.org) nodes to interact with [Pardot(Salesforce Marketing Cloud)](http://www.salesforce.com/jp/marketing-cloud/overview/).
+A set of [Node-RED](http://www.nodered.org) nodes to interact with [Pardot](http://www.salesforce.com/jp/pardot/overview/).
 
 ## Install
 
