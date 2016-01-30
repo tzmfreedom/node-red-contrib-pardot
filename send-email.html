@@ -1,0 +1,59 @@
+<script type="text/javascript">
+  RED.nodes.registerType('send-email', {
+    category: 'Pardot',
+    color: '#a6bbcf',
+    defaults: {
+      name: {value: ""},
+      pardotConfig: {value: "", type: "pardot", required: true},
+      campaignId: {value: ""},
+      emailTemplateId: {value: ""},
+      prospect: {value: ""},
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "envelope.png",
+    label: function () {
+      return this.name || "send-email";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="send-email">
+  <div class="form-row">
+    <label for="node-input-pardotConfig"><i class="fa fa-cog"></i> Configuration</label>
+    <input type="text" id="node-input-pardotConfig" >
+  </div>
+  <div class="form-row">
+    <label for="node-input-campaignId"><i class="fa fa-wrench"></i> Campaign ID</label>
+    <input type="text" id="node-input-campaignId" placeholder="Campaign ID">
+  </div>
+  <div class="form-row">
+    <label for="node-input-emailTemplateId"><i class="fa fa-wrench"></i> Email Template ID</label>
+    <input type="text" id="node-input-emailTemplateId" placeholder="Email Template ID">
+  </div>
+  <div class="form-row">
+    <label for="node-input-prospect"><i class="fa fa-fa-use"></i> Prospect</label>
+    <input type="text" id="node-input-prospect" placeholder="Prospect ID or Email">
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="send-email">
+  <p>Send Email with Pardot.</p>
+  <p>
+    The default parameters for send email request can be configured in the node.
+    If not specified, the following msg parameters are used.
+  </p>
+  <ul>
+    <li><code>campaignId</code> - Campaign ID</li>
+    <li><code>emailTemplateId</code> - Email Template ID</li>
+    <li><code>prospect</code> - Prospect</li>
+  </ul>
+  <p>
+    The resulting message have payload property and the value is a response of send email API.
+  </p>
+</script>
+

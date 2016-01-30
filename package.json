@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-pardot",
+  "version": "0.0.1",
+  "description": "Pardot(Salesforce Marketing Cloud) Node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tzmfreedom/node-red-contrib-pardot"
+  },
+  "dependencies": {
+    "email-validator": "^1.0.4",
+    "pardot": "0.0.6"
+  },
+  "keywords": [
+    "node-red",
+    "pardot",
+    "marketing cloud",
+    "salesforce"
+  ],
+  "node-red": {
+    "nodes": {
+      "pardot": "pardot.js",
+      "send-email": "send-email.js"
+    }
+  },
+  "author": {
+    "name": "Makoto Tajitsu",
+    "email": "makoto_tajitsu@hotmail.co.jp"
+  }
+}
